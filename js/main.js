@@ -4,6 +4,7 @@ var arr = [];
 async function start(){
     let res = await fetch(url);
     if(res.ok){
+        document.getElementById("main").innerHTML = "";
         let data = await res.json();
         let tbl = document.createElement("table");
         tbl.className = "table";
